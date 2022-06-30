@@ -12,10 +12,11 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <!-- <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"> -->
+          <i class="fas fa-user-circle fa-2x text-light img-circle elevation-2"></i>
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block text-uppercase"><?php echo $this->session->userdata('USERNAME');?></a>
         </div>
       </div>
 
@@ -103,6 +104,14 @@
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Kelola Akun
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url();?>index.php/auth/logout" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Logout
               </p>
             </a>
           </li>

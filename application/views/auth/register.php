@@ -50,13 +50,13 @@
         </div>
         <div class="input-group mb-3">
           <select name="role" class="form-control" id="role" required>
-            <option value="">-</option>
+            <option value="">- pilih role -</option>
             <option value="administrator">Admin</option>
             <option value="public">Public</option>
           </select>
         </div>
         <div class="input-group mb-2">
-            <button type="submit" class="form-control btn btn-primary btn-block">Masuk</button>
+            <button type="submit" class="form-control btn btn-primary btn-block">Daftar</button>
         </div>
     <?php echo form_close(); ?>
 
