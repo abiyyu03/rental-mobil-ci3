@@ -22,40 +22,27 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <div class="mb-3 d-flex justify-content-end">
-          <a href="merk/create" class="btn btn-primary">Tambah merk</a>
-        </div>
+      <div class="container-fluid"> 
         <div class="card">
-              <!-- <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
-              </div> -->
+              <div class="card-header">
+                <h3 class="card-title">Edit data</h3>
+              </div>
               <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Nama</th>
-                    <th>Produk</th>
-                    <th>Aksi</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <?php $i = 1; foreach($merk_data as $m) : ?>
-                  <tr>
-                    <td><?= $i++; ?></td>
-                    <td><?= $m->nama; ?></td>
-                    <td><?= $m->produk; ?></td>
-                    <td>
-                      <!-- <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a> -->
-                      <a href="merk/edit?id=<?= $m->id; ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                      <a href="merk/delete?id=<?= $m->id; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <?php endforeach;?>
-                  </tbody>
-                </table>
+              <div class="card-body"> 
+                <?= form_open('merk/update',['action'=>'POST']);?>
+                <div class="form-group">
+                  <label for="nama">Nama Mobil</label>
+                  <input type="hidden" class="form-control" name="id" value="<?= $merk_data->id ;?>">
+                  <input type="text" class="form-control" name="nama" value="<?= $merk_data->nama ;?>">
+                </div>
+                <div class="form-group">
+                  <label for="produk">Produk</label>
+                  <input type="text" class="form-control" name="produk" value="<?= $merk_data->produk ;?>">
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+                <?= form_close();?>
               </div>
               <!-- /.card-body -->
             </div>

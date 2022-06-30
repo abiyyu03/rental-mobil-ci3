@@ -22,7 +22,7 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-
+    <h5 class="text-center">Login</h5>
      <?php echo form_open('auth/prosesLogin',['action'=>'POST']);?>
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="username" placeholder="Username">
