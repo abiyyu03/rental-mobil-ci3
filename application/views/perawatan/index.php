@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Perawatan Mobil</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -22,10 +22,31 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid"> 
+      <div class="container-fluid">
+        <div class="mb-3 d-flex justify-content-end">
+          <a href="merk/create" class="btn btn-primary">Tambah merk</a>
+        </div>
         <div class="card">
-            <div class="card-body"> 
-                <h3>Selamat datang di Aplikasi Rental Mobil</h3>
+              <!-- <div class="card-header">
+                <h3 class="card-title">DataTable with default features</h3>
+              </div> -->
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nama</th>
+                    <th>Produk</th>
+                    <th>Aksi</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
         </div>
     </section>
