@@ -6,7 +6,6 @@ class AuthModel Extends CI_Model
         $sql = "SELECT * FROM users WHERE username=? AND password=md5(?)";
         $data= [$username,$password];
         $query = $this->db->query($sql,$data);
-        var_dump($data);
         return $query->row();
     }
 

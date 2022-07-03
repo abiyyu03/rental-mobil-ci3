@@ -93,7 +93,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url();?>index.php/jenisPerawatan" class="nav-link">
+                <a href="<?= base_url();?>index.php/jenis_perawatan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Jenis Perawatan</p>
                 </a>

@@ -24,7 +24,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="mb-3 d-flex justify-content-end">
-          <a href="merk/create" class="btn btn-primary">Tambah merk</a>
+          <a href="perawatan/create" class="btn btn-primary">Tambah Perawatan Mobil</a>
         </div>
         <div class="card">
               <!-- <div class="card-header">
@@ -36,13 +36,30 @@
                   <thead>
                   <tr>
                     <th>#</th>
-                    <th>Nama</th>
-                    <th>Produk</th>
+                    <th>Tanggal</th>
+                    <th>Biaya (Rp)</th>
+                    <th>Deskripsi</th>
+                    <th>Nomor Plat Mobil</th>
+                    <th>Jenis Perawatan</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
                   <tbody>
-                  
+                  <?php $i = 1; foreach($perawatan_data as $p) :?>
+                    <tr>
+                      <td><?= $i++ ?></td>
+                      <td><?= $p->tanggal?></td>
+                      <td><?= $p->biaya?></td>
+                      <td><?= $p->deskripsi?></td>
+                      <td><?= $p->nama_mobil?></td>
+                      <td><?= $p->nama_jenis?></td>
+                      <td>
+                        <!-- <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a> -->
+                        <a href="perawatan/edit?id=<?= $p->id; ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                        <a href="perawatan/delete?id=<?= $p->id; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                      </td>
+                    </tr>
+                  <?php endforeach;?>
                   </tbody>
                 </table>
               </div>

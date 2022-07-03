@@ -7,13 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="../merk" class="btn btn-warning mb-3"><i class="fas fa-arrow-left"></i> Kembali</a>
-            <h1 class="m-0">Merek Mobil</h1>
+            <h1 class="m-0">Daftar Sewa Mobil</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Merek Mobil</li>
+              <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Merek Mobil</li> -->
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -23,26 +22,31 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid"> 
+      <div class="container-fluid">
+        <div class="mb-3 d-flex justify-content-end">
+          <a href="merk/create" class="btn btn-primary">Sewa</a>
+        </div>
         <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Tambah data</h3>
-              </div>
+              <!-- <div class="card-header">
+                <h3 class="card-title">DataTable with default features</h3>
+              </div> -->
               <!-- /.card-header -->
-              <div class="card-body"> 
-                <?= form_open('merk/store',['action'=>'POST'])?>
-                <div class="form-group">
-                  <label for="nama">Nama Mobil</label>
-                  <input type="text" class="form-control" name="nama">
-                </div>
-                <div class="form-group">
-                  <label for="nama">Produk</label>
-                  <input type="text" class="form-control" name="produk">
-                </div>
-                <div class="form-group">
-                  <button type="submit" class="btn btn-primary">Simpan</button>
-                </div>
-                <?= form_close();?>
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Tanggal Mulai</th>
+                    <th>Tanggal Akhir</th>
+                    <th>Tujuan</th>
+                    <th>Nama penyewa</th>
+                    <th>Nama Mobil</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  
+                  </tbody>
+                </table>
               </div>
               <!-- /.card-body -->
             </div>

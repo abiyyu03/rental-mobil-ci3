@@ -7,8 +7,8 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <a href="../akun" class="btn btn-warning mb-3"><i class="fas fa-arrow-left"></i> Kembali</a>
-            <h1 class="m-0">Edit Akun</h1>
+            <a href="../jenis_perawatan" class="btn btn-warning mb-3"><i class="fas fa-arrow-left"></i> Kembali</a>
+            <h1 class="m-0">Jenis Perawatan</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -26,31 +26,14 @@
       <div class="container-fluid"> 
         <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Edit data</h3>
+                  <h3 class="card-title">Tambah data</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body"> 
-                <?= form_open('akun/update',['action'=>'POST']);?>
+                <?= form_open('jenis_perawatan/store',['action'=>'POST'])?>
                 <div class="form-group">
-                  <label for="username">Username</label>
-                  <input type="hidden" class="form-control" name="id" value="<?= $akun_data->id ;?>">
-                  <input type="text" class="form-control" name="username" value="<?= $akun_data->username ;?>">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="text" class="form-control" name="email" value="<?= $akun_data->email ;?>">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" class="form-control" name="password" value="">
-                </div>
-                <div class="form-group">
-                  <label for="Role">Role</label>
-                  <select name="role" class="form-control" id="role" required>
-                    <option value="">- pilih role -</option>
-                    <option value="administrator" <?php ($akun_data->role == "administrator") ? 'selected' : ' '  ?>>Admin</option>
-                    <option value="public" <?php ($akun_data->role == "public") ? 'selected' : ' '  ?>>Public</option>
-                </select>
+                  <label for="nama">Nama Perawatan</label>
+                  <input type="text" class="form-control" name="nama" required>
                 </div>
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary">Simpan</button>
