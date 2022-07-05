@@ -14,13 +14,13 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="<?= base_url() ?>template/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="/assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand" href="#page-top">RentCar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -103,7 +103,7 @@
                         <div class="card h-100">
                             <!-- Product image-->
                             <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Teratas</div>
-                            <img class="card-img-top" src="assets/img/chevrolet-yellow.jpg" alt="..." />
+                            <img class="card-img-top" src="<?= base_url() ?>template/assets/img/chevrolet-yellow.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -130,7 +130,7 @@
                             <!-- Sale badge-->
                             <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Teratas</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="assets/img/dan-gold-N7RiDzfF2iw-unsplash.jpg" alt="..." />
+                            <img class="card-img-top" src="<?= base_url() ?>template/assets/img/dan-gold-N7RiDzfF2iw-unsplash.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -156,7 +156,7 @@
                         <div class="card h-100">
                             <!-- Product image-->
                             <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Teratas</div>
-                            <img class="card-img-top" src="assets/img/olav-tvedt-6lSBynPRaAQ-unsplash.jpg" alt="..." />
+                            <img class="card-img-top" src="<?= base_url() ?>template/assets/img/olav-tvedt-6lSBynPRaAQ-unsplash.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -182,7 +182,7 @@
                         <div class="card h-100">
                             <!-- Product image-->
                             <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Teratas</div>
-                            <img class="card-img-top" src="assets/img/merah.jpg" alt="..." />
+                            <img class="card-img-top" src="<?= base_url() ?>template/assets/img/merah.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -280,7 +280,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="<?= base_url() ?>template/assets/img/team/1.jpg" alt="..." />
                             <h4>Abiyyu Cakra</h4>
                             <p class="text-muted">Mahasiswa</p>
                             <h3 class="section-subheading">"Harganya terjangkau, proses menyewanya mudah dan cepat"</h3>
@@ -288,7 +288,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="<?= base_url() ?>template/assets/img/team/2.jpg" alt="..." />
                             <h4>Fulan bin Fulan</h4>
                             <p class="text-muted">Wiraswasta</p>
                             <h3 class="section-subheading">"Respon yang cepat, kondisi mobil yang baik, pokoknya top deh.."</h3>
@@ -296,7 +296,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="<?= base_url() ?>template/assets/img/team/3.jpg" alt="..." />
                             <h4>Ahmad Fulan</h4>
                             <p class="text-muted">Mahasiswa</p>
                             <h3 class="section-subheading">"Harganya sesuai dengan kantong saya, mantep pokoknya :D"</h3>
