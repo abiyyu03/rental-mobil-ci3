@@ -7,6 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
+            <a href="../perawatan" class="btn btn-warning mb-3"><i class="fas fa-arrow-left"></i> Kembali</a>
             <h1 class="m-0">Perawatan</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
@@ -24,7 +25,7 @@
     <section class="content">
       <div class="container-fluid"> 
         <div class="card">
-            <div class="card-header bg-primary">
+            <div class="card-header">
               <h3 class="card-title">Tambah Perawatan Mobil</h3>
             </div>
             <div class="card-body">

@@ -28,7 +28,13 @@ class AkunModel extends CI_Model
 
     function update($data)
     {
-        $sql = "UPDATE users SET username=?, password=md5(?), email=?, role=? WHERE id=?";
+        $sql = "UPDATE users SET role=? WHERE id=?";
+        $this->db->query($sql,$data);
+    }
+
+    function updateFromConfig($data)
+    {
+        $sql = "UPDATE users SET username=?, password=md5(?), email=? WHERE id=?";
         $this->db->query($sql,$data);
     }
 

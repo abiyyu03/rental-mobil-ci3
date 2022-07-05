@@ -14,18 +14,23 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image:url('../assets/image/bg-login.jpg')">
 <div class="login-box">
-  <div class="login-logo">
-    <a href="<?php echo base_url(); ?>/assets/index2.html"><b>Rental Mobil </b>App</a>
+  <div class="login-logo"> 
+    <a href="#" class="text-light"><b><i class="fas fa-car"></i> RentCar App</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-    <h5 class="text-center">Login</h5>
-     <?php echo form_open('auth/prosesLogin',['action'=>'POST']);?>
+    <h5 class="text-center"><i class="fas fa-sign-in-alt"></i> Login</h5>
+    <?php if(isset($_SESSION['gagal'])) { ?>
+      <div class="alert alert-danger">
+       <span><?php echo @$_SESSION['gagal'];?></span> 
+      </div>
+    <?php } ?>
+     <?php echo form_open('auth/prosesLogin',['action'=>'POST','autocomplete'=> false]);?>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" name="username" placeholder="Username">
+          <input type="text" class="form-control" name="username" value="" placeholder="Username" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -33,7 +38,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" name="password" placeholder="Password">
+          <input type="password" class="form-control" name="password" value="" placeholder="Password" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -45,11 +50,12 @@
         </div>
     <?php echo form_close(); ?>
 
-      <p class="mb-1">
+      <p class="mb-2 text-center">
         <!-- <a href="forgot-password.html">Saya lupa password ey</a> -->
+        Atau
       </p>
       <p class="mb-0">
-        <a href="<?= base_url();?>index.php/auth/register" class="text-center">Buat Akun</a>
+        <a href="<?= base_url();?>auth/register" class="btn bg-teal form-control">Buat Akun Baru</a>
       </p>
     </div>
     <!-- /.login-card-body -->

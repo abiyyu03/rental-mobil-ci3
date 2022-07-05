@@ -24,6 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/rental-mobil-ci3/';
+// $root  = "http://".$_SERVER['HTTP_HOST'];
+// $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+// $config['base_url']    = $root;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +38,7 @@ $config['base_url'] = 'http://localhost/rental-mobil-ci3/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -530,3 +533,9 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+$config['upload_path'] = './image/';
+$config['allowed_types'] = 'gif|jpg|png';
+$config['max_size'] = 100;
+$config['max_width'] = 400;
+$config['max_height'] = 400;

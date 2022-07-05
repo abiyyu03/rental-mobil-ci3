@@ -7,6 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
+            <a href="../sewa" class="btn btn-warning mb-3"><i class="fas fa-arrow-left"></i> Kembali</a>
             <h1 class="m-0">Sewa Mobil</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
@@ -30,31 +31,43 @@
             <div class="card-body"> 
               <!-- /.card-header -->
               <div class="card-body"> 
-                <?= form_open('merk/store',['action'=>'POST'])?>
+                <?= form_open('sewa/store',['action'=>'POST'])?>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="tanggal_mulai">Tanggal Mulai Sewa</label>
-                        <input type="date" class="form-control" name="tanggal_mulai">
+                        <input type="date" class="form-control" name="tanggal_mulai" required>
                     </div>
                     <div class="col-md-6">
                         <label for="tanggal_akhir">Tanggal Selesai Sewa</label>
-                        <input type="date" class="form-control" name="tanggal_akhir">
+                        <input type="date" class="form-control" name="tanggal_akhir" required>
                     </div>
                 </div>
                 <div class="form-group mt-4">
                     <label for="tujuan">Tujuan</label>
-                    <input type="text" class="form-control" name="tujuan">
+                    <input type="text" class="form-control" name="tujuan" required>
                 </div>
                 <div class="form-group">
                     <label for="noktp">Nomor KTP</label>
-                    <input type="number" class="form-control" name="noktp">
+                    <input type="number" class="form-control" name="noktp" required>
                 </div>
                 <div class="form-group">
-                    <label for="mobil_id">Pilih Mobil</label>
-                    <select name="mobil_id" id="mobil_id" class="form-control">
-                        <option value="">-</option>
-                    </select>
+                  <label for="mobil_id">Pilih Mobil</label>
+                  <select name="mobil_id" id="mobil_id" class="form-control" required>
+                    <option value="">-</option>
+                    <?php foreach($mobil_data as $m) :?>
+                      <option value="<?= $m->id;?>"><?= $m->nama;?> - <?= $m->nopol;?></option>
+                    <?php endforeach;?>
+                  </select>
                 </div>
+                <!-- <div class="form-group">
+                  <label for="user_id">Pilih User</label>
+                  <select name="user_id" id="user_id" class="form-control">
+                    <option value="">-</option>
+                    <?php foreach($user_data as $u) :?>
+                      <option value="<?= $u->id;?>"><?= $u->username;?></option>
+                    <?php endforeach;?>
+                  </select>
+                </div> -->
                 <div class="form-group mt-3">
                   <button type="submit" class="btn btn-primary">Simpan Data</button>
                 </div>

@@ -13,7 +13,7 @@ class Akun extends CI_Controller{
             $this->load->view('akun/index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."index.php/auth/login");
+            redirect(base_url()."auth/login");
         }
     }
 
@@ -24,7 +24,8 @@ class Akun extends CI_Controller{
             $id = $this->input->get('id');
             $this->load->model('AkunModel','akun');
             $this->akun->delete($id);
-            redirect(base_url()."index.php/akun");
+            $this->session->set_flashdata('sukses','data berhasil dihapus!');
+            redirect(base_url()."akun");
         }
     }
 
@@ -52,19 +53,20 @@ class Akun extends CI_Controller{
             $this->load->model('AkunModel','akun');
 
             $idedit = $this->input->post('id');
-            $username = $this->input->post('username');
-            $password = $this->input->post('password');
-            $email = $this->input->post('email');
+            // $username = $this->input->post('username');
+            // $password = $this->input->post('password');
+            // $email = $this->input->post('email');
             $role = $this->input->post('role');
     
-            $data[] = $username;
-            $data[] = $password;
-            $data[] = $email;
+            // $data[] = $username;
+            // $data[] = $password;
+            // $data[] = $email;
             $data[] = $role;
             $data[] = $idedit;
     
             $this->akun->update($data);
-            redirect(base_url()."index.php/akun");
+            $this->session->set_flashdata('sukses','data berhasil diupdate!');
+            redirect(base_url()."akun");
         }
     }
 }

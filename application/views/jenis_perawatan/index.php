@@ -26,17 +26,23 @@
         <div class="mb-3 d-flex justify-content-end">
           <a href="jenis_perawatan/create" class="btn btn-primary">Tambah Jenis Perawatan</a>
         </div>
+        <?php if(isset($_SESSION['sukses'])) { ?>
+        <div class="alert alert-success">
+           <span><?php echo @$_SESSION['sukses'];?></span> 
+        </div>
+        <?php } ?>
         <div class="card">
               <!-- <div class="card-header">
                 <h3 class="card-title">DataTable with default features</h3>
               </div> -->
               <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
+              <div class="card-body table-responsive">
+                <table id="example1" class="table table-bordered table-striped table-hover">
+                  <thead class="table-dark">
                   <tr>
                     <th>#</th>
                     <th>Nama</th>
+                    <th>Aksi</th>
                   </tr>
                   </thead>
                   <tbody>

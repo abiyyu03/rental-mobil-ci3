@@ -15,7 +15,7 @@ class Merk extends CI_Controller
             $this->load->view('merk/index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."index.php/auth/login");
+            redirect(base_url()."auth/login");
         }
     }
 
@@ -65,7 +65,8 @@ class Merk extends CI_Controller
             $data[] = $idedit;
     
             $this->merk->update($data);
-            redirect(base_url()."index.php/merk");
+            $this->session->set_flashdata('sukses','data berhasil diupdate!');
+            redirect(base_url()."merk");
         }
     }
 
@@ -83,7 +84,8 @@ class Merk extends CI_Controller
             $data[] = $produk;
     
             $this->merk->store($data);
-            redirect(base_url()."index.php/merk");
+            $this->session->set_flashdata('sukses','data berhasil ditambah!');
+            redirect(base_url()."merk");
         }
     }
 
@@ -92,6 +94,7 @@ class Merk extends CI_Controller
         $id = $this->input->get('id');
         $this->load->model('MerkModel','merk');
         $this->merk->delete($id);
-        redirect(base_url()."index.php/merk");
+        $this->session->set_flashdata('sukses','data berhasil dihapus!');
+        redirect(base_url()."merk");
     }
 }

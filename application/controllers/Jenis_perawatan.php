@@ -15,7 +15,7 @@ class Jenis_perawatan extends CI_Controller
             $this->load->view('jenis_perawatan/index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."index.php/auth/login");
+            redirect(base_url()."auth/login");
         }
     }
 
@@ -44,7 +44,8 @@ class Jenis_perawatan extends CI_Controller
             $data[] = $nama;
     
             $this->jenis_perawatan->store($data);
-            redirect(base_url()."index.php/jenis_perawatan");
+            $this->session->set_flashdata('sukses','data berhasil ditambah!');
+            redirect(base_url()."jenis_perawatan");
         }
     }
     
@@ -53,7 +54,8 @@ class Jenis_perawatan extends CI_Controller
         $id = $this->input->get('id');
         $this->load->model('JenisPerawatanModel','jenis_perawatan');
         $this->jenis_perawatan->delete($id);
-        redirect(base_url()."index.php/jenis_perawatan");
+        $this->session->set_flashdata('sukses','data berhasil dihapus!');
+        redirect(base_url()."jenis_perawatan");
     }
 
     function edit () {
@@ -86,7 +88,8 @@ class Jenis_perawatan extends CI_Controller
             $data[] = $idedit;
     
             $this->jenis_perawatan->update($data);
-            redirect(base_url()."index.php/jenis_perawatan");
+            $this->session->set_flashdata('sukses','data berhasil diupdate!');
+            redirect(base_url()."jenis_perawatan");
         }
     }
 }
