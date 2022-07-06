@@ -9,7 +9,7 @@ class Dashboard extends CI_Controller
             $this->load->view('index');
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
 }

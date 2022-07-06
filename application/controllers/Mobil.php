@@ -12,7 +12,7 @@ class Mobil extends CI_Controller {
             $this->load->view('mobil/index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
     
@@ -31,7 +31,7 @@ class Mobil extends CI_Controller {
             $this->load->view('mobil/detail',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
 
@@ -48,7 +48,7 @@ class Mobil extends CI_Controller {
             $this->load->view('mobil/create',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
     
@@ -92,7 +92,7 @@ class Mobil extends CI_Controller {
             
             $this->mobil->store($data);
             $this->session->set_flashdata('sukses','data berhasil ditambah!');
-            redirect(base_url()."mobil");
+            redirect(base_url()."index.php/mobil");
         }
     }
 
@@ -155,7 +155,7 @@ class Mobil extends CI_Controller {
             
             $this->mobil->update($data);
             $this->session->set_flashdata('sukses','data berhasil diupdate!');
-            redirect(base_url()."mobil");
+            redirect(base_url()."index.php/mobil");
         }
     }
 
@@ -170,6 +170,6 @@ class Mobil extends CI_Controller {
 
         $this->mobil->delete($id);
         $this->session->set_flashdata('sukses','data berhasil dihapus!');
-        redirect(base_url()."mobil");
+        redirect(base_url()."index.php/mobil");
     }
 }

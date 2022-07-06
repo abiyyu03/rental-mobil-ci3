@@ -13,7 +13,7 @@ class Perawatan extends CI_Controller
             $this->load->view('perawatan/index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
 
@@ -30,7 +30,7 @@ class Perawatan extends CI_Controller
             $this->load->view('perawatan/create',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
     
@@ -55,7 +55,7 @@ class Perawatan extends CI_Controller
     
             $this->perawatan->store($data);
             $this->session->set_flashdata('sukses','data berhasil ditambah!');
-            redirect(base_url()."jenis_perawatan");
+            redirect(base_url()."index.php/jenis_perawatan");
         }
     }
 
@@ -100,7 +100,7 @@ class Perawatan extends CI_Controller
     
             $this->perawatan->update($data);
             $this->session->set_flashdata('sukses','data berhasil diupdate!');
-            redirect(base_url()."perawatan");
+            redirect(base_url()."index.php/perawatan");
         }
     }
 
@@ -110,6 +110,6 @@ class Perawatan extends CI_Controller
         $this->load->model('PerawatanModel','perawatan');
         $this->perawatan->delete($id);
         $this->session->set_flashdata('sukses','data berhasil dihapus!');
-        redirect(base_url()."perawatan");
+        redirect(base_url()."index.php/perawatan");
     }
 }

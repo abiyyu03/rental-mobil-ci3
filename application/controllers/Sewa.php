@@ -14,7 +14,7 @@ class Sewa extends CI_Controller
             $this->load->view('sewa/index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
 
@@ -34,7 +34,7 @@ class Sewa extends CI_Controller
             $this->load->view('sewa/user_index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
 
@@ -52,7 +52,7 @@ class Sewa extends CI_Controller
             $this->load->view('sewa/create',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
 
@@ -117,9 +117,9 @@ class Sewa extends CI_Controller
             $this->sewa->update($data);
             $this->session->set_flashdata('sukses','data berhasil diupdate!');
             if($role_data['role'] == "administrator"){
-                redirect(base_url()."sewa");
+                redirect(base_url()."index.php/sewa");
             } else {
-                redirect(base_url()."sewa/user_index");
+                redirect(base_url()."index.php/sewa/user_index");
             }
         }
     }
@@ -150,9 +150,9 @@ class Sewa extends CI_Controller
             $this->sewa->store($data);
             $this->session->set_flashdata('sukses','data berhasil ditambah!');
             if($role_data['role'] == "administrator"){
-                redirect(base_url()."sewa");
+                redirect(base_url()."index.php/sewa");
             } else {
-                redirect(base_url()."sewa/user_index");
+                redirect(base_url()."index.php/sewa/user_index");
             }
         }
     }
@@ -163,6 +163,6 @@ class Sewa extends CI_Controller
         $this->load->model('SewaModel','sewa');
         $this->sewa->delete($id);
         $this->session->set_flashdata('sukses','data berhasil dihapus!');
-        redirect(base_url()."sewa");
+        redirect(base_url()."index.php/sewa");
     }
 }

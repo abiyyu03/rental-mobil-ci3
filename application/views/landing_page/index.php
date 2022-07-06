@@ -30,8 +30,8 @@
                         <li class="nav-item"><a class="nav-link" href="#services">Tentang</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Mengapa</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Testimoni</a></li>
-                        <li class="nav-item"><a class="nav-link" href="auth/login">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="auth/register">Daftar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php/auth/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php/auth/register">Daftar</a></li>
                     </ul>
                 </div>
             </div>

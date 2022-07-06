@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?= base_url();?>dashboard" class="nav-link">
+            <a href="<?= base_url();?>index.php/dashboard" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
@@ -35,7 +35,7 @@
           </li>
           <?php if($this->session->userdata('ROLE') == "public") { ?>
           <li class="nav-item">
-            <a href="<?= base_url();?>sewa/user_index" class="nav-link">
+            <a href="<?= base_url();?>index.php/sewa/user_index" class="nav-link">
               <i class="nav-icon fas fa-money-bill"></i>
               <p>
                 Daftar Sewa
@@ -45,7 +45,7 @@
           <?php } ?>
           <?php if($this->session->userdata('ROLE') == "administrator") { ?>
           <li class="nav-item">
-            <a href="<?= base_url();?>sewa" class="nav-link">
+            <a href="<?= base_url();?>index.php/sewa" class="nav-link">
               <i class="nav-icon fas fa-money-bill"></i>
               <p>
                 Sewa
@@ -62,13 +62,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url();?>merk" class="nav-link">
+                <a href="<?= base_url();?>index.php/merk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Merk Mobil</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url();?>mobil" class="nav-link">
+                <a href="<?= base_url();?>index.php/mobil" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Mobil</p>
                 </a>
@@ -85,13 +85,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url();?>perawatan" class="nav-link">
+                <a href="<?= base_url();?>index.php/perawatan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Perawatan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url();?>jenis_perawatan" class="nav-link">
+                <a href="<?= base_url();?>index.php/jenis_perawatan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Jenis Perawatan</p>
                 </a>
@@ -99,7 +99,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url();?>akun" class="nav-link">
+            <a href="<?= base_url();?>index.php/akun" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Kelola Akun
@@ -108,7 +108,7 @@
           </li>
           <?php } ?>
           <li class="nav-item">
-            <a href="<?= base_url();?>config" class="nav-link">
+            <a href="<?= base_url();?>index.php/config" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
                 Pengaturan Akun
@@ -116,7 +116,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url();?>auth/logout" class="nav-link">
+            <a href="<?= base_url();?>index.php/auth/logout" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Logout

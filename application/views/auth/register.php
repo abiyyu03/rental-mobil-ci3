@@ -14,7 +14,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition login-page" style="background-image:url('../assets/image/bg-login.jpg')">
+<body class="hold-transition login-page" style="background-image:url('../../assets/image/bg-login.jpg')">
 <div class="login-box">
   <div class="login-logo">
     <a href="#" class="text-light"><b><i class="fas fa-car"></i> RentCar App</b></a>
@@ -71,7 +71,7 @@
     <?php echo form_close(); ?>
 
       <p class="mb-1 text-center mt-2">
-        <a href="<?= base_url();?>auth/login">Eh udah punya akun deng</a>
+        <a href="<?= base_url();?>index.php/auth/login">Eh udah punya akun deng</a>
       </p>
     </div>
     <!-- /.login-card-body -->

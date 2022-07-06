@@ -14,7 +14,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition login-page" style="background-image:url('../assets/image/bg-login.jpg')">
+<body class="hold-transition login-page" style="background-image:url('../../assets/image/bg-login.jpg')">
 <div class="login-box">
   <div class="login-logo"> 
     <a href="#" class="text-light"><b><i class="fas fa-car"></i> RentCar App</b></a>
@@ -55,7 +55,7 @@
         Atau
       </p>
       <p class="mb-0">
-        <a href="<?= base_url();?>auth/register" class="btn bg-teal form-control">Buat Akun Baru</a>
+        <a href="<?= base_url();?>index.php/auth/register" class="btn bg-teal form-control">Buat Akun Baru</a>
       </p>
     </div>
     <!-- /.login-card-body -->

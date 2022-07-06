@@ -17,7 +17,7 @@ class Config extends CI_Controller
             $this->load->view('config/index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
     
@@ -44,7 +44,7 @@ class Config extends CI_Controller
     
             $this->akun->updateFromConfig($data);
             $this->session->set_flashdata('sukses','data berhasil diupdate!, data akan berefek pada login berikutnya');
-            redirect(base_url()."config");
+            redirect(base_url()."index.php/config");
         }
     }
 }
