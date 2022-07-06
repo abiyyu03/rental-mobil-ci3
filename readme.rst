@@ -2,7 +2,7 @@
 RentCar App
 ************
 
-Aplikasi Rental Mobil berbasis Web, dibuat dengan Codeigniter 3
+Aplikasi Rental Mobil berbasis Web
 
 *********************
 Nama Anggota Kelompok
