@@ -4,9 +4,9 @@ RentCar App
 
 Aplikasi Rental Mobil berbasis Web
 
-*********************
-Nama Anggota Kelompok
-*********************
+***********************
+Nama Anggota Kelompok 2
+***********************
 
 1. Abiyyu Cakra - TI04
 2. Beryll Pradana Ramadhan - TI04
