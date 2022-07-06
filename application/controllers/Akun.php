@@ -13,7 +13,7 @@ class Akun extends CI_Controller{
             $this->load->view('akun/index',$data);
             $this->load->view('components/script');
         } else {
-            redirect(base_url()."auth/login");
+            redirect(base_url()."index.php/auth/login");
         }
     }
 
@@ -25,7 +25,7 @@ class Akun extends CI_Controller{
             $this->load->model('AkunModel','akun');
             $this->akun->delete($id);
             $this->session->set_flashdata('sukses','data berhasil dihapus!');
-            redirect(base_url()."akun");
+            redirect(base_url()."index.php/akun");
         }
     }
 
@@ -66,7 +66,7 @@ class Akun extends CI_Controller{
     
             $this->akun->update($data);
             $this->session->set_flashdata('sukses','data berhasil diupdate!');
-            redirect(base_url()."akun");
+            redirect(base_url()."index.php/akun");
         }
     }
 }
