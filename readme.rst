@@ -16,9 +16,9 @@ Nama Anggota Kelompok
 ********** 
 Tech Stack
 ********** 
-1. Codeigniter 3 <https://www.codeigniter.com/>`_.
-2. AdminLTE 3 <https://github.com/ColorlibHQ/AdminLTE>`_.
-3. Agency Template <https://startbootstrap.com/theme/agency>`_. (Landing Page Template)
+1. `Codeigniter 3 <https://www.codeigniter.com/>`_.
+2. `AdminLTE 3 <https://github.com/ColorlibHQ/AdminLTE>`_.
+3. `Agency Template <https://startbootstrap.com/theme/agency>`_. (Landing Page Template)
 
 *******
 License
