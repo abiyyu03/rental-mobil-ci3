@@ -161,7 +161,7 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Application made by kelompok 2 - TI04</div>
+                    <div class="col-lg-4 text-lg-start">Application made by Abiyyu's group - TI04</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <!-- <a class="btn btn-dark btn-social mx-2" href="https://github.com/abiyyu03"><i class="fab fa-github"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/abiyyucakra03"><i class="fab fa-instagram"></i></a>
