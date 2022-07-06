@@ -28,7 +28,7 @@
        <span><?php echo @$_SESSION['gagal'];?></span> 
       </div>
     <?php } ?>
-    <form action="auth/prosesLogin" method="POST" autocomplete="off"></form>
+     <?php echo form_open('auth/prosesLogin',['action'=>'POST','autocomplete'=> false]);?>
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="username" value="" placeholder="Username" required>
           <div class="input-group-append">
@@ -48,7 +48,7 @@
         <div class="input-group mb-2">
             <button type="submit" class="form-control btn btn-primary btn-block">Masuk</button>
         </div>
-    </form>
+    <?php echo form_close(); ?>
 
       <p class="mb-2 text-center">
         <!-- <a href="forgot-password.html">Saya lupa password ey</a> -->
