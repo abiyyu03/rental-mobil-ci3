@@ -5,7 +5,7 @@ class Auth extends CI_Controller
     function login()
     {
         if($this->session->has_userdata('USERNAME')) {
-            redirect(base_url()."index.php/dashboard");
+            redirect("index.php/dashboard");
         }
         $this->load->view('auth/login');
     }
@@ -21,16 +21,16 @@ class Auth extends CI_Controller
             $this->session->set_userdata('USERNAME',$row->username);
             $this->session->set_userdata('ROLE',$row->role);
             $this->session->set_userdata('USER',$row);
-            redirect(base_url()."index.php/dashboard");
+            redirect("index.php/dashboard");
         }
         $this->session->set_flashdata('gagal','Login Gagal, silahkan coba lagi');
-        redirect(base_url()."index.php/auth/login?status=f");
+        redirect("index.php/auth/login?status=f");
     }
 
     function register()
     {
         if($this->session->has_userdata('USERNAME')) {
-            redirect(base_url()."index.php/dashboard");
+            redirect("index.php/dashboard");
         }
         $this->load->view('auth/register');
     }
@@ -54,7 +54,7 @@ class Auth extends CI_Controller
 
         $this->register->store($data);
         $this->session->set_flashdata('sukses','Registrasi berhasil, silahkan login!');
-        redirect(base_url()."index.php/auth/register");
+        redirect("index.php/auth/register");
     }
 
     function logout()
@@ -62,6 +62,6 @@ class Auth extends CI_Controller
         $this->session->set_userdata('USERNAME');
         $this->session->set_userdata('ROLE');
         $this->session->set_userdata('USER');
-        redirect(base_url()."index.php/auth/login");
+        redirect("index.php/auth/login");
     }
 }
