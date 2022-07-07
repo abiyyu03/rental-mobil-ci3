@@ -56,19 +56,10 @@
                   <select name="mobil_id" id="mobil_id" class="form-control" required>
                     <option value="">-</option>
                     <?php foreach($mobil_data as $m) :?>
-                      <option <?= $sewa_data->mobil_id == $m->id ? 'selected' : ''?> value="<?= $m->id;?>"><?= $m->nama;?> - <?= $m->nopol;?></option>
+                      <option <?= $sewa_data->mobil_id == $m->id_mobil ? 'selected' : ''?> value="<?= $m->id_mobil;?>"><?= $m->nama;?> - <?= $m->nopol;?></option>
                     <?php endforeach;?>
                   </select>
                 </div>
-                <!-- <div class="form-group">
-                  <label for="user_id">Pilih User</label>
-                  <select name="user_id" id="user_id" class="form-control">
-                    <option value="">-</option>
-                    <?php foreach($user_data as $u) :?>
-                      <option value="<?= $u->id;?>"><?= $u->username;?></option>
-                    <?php endforeach;?>
-                  </select>
-                </div> -->
                 <div class="form-group mt-3">
                   <button type="submit" class="btn btn-primary">Simpan Data</button>
                 </div>
