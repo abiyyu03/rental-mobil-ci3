@@ -10,7 +10,7 @@ class SewaModel extends CI_Model
 
     function getAllByUser($id)
     {
-        $sql = "SELECT sewa.id,sewa.tanggal_mulai, sewa.tanggal_akhir, sewa.tujuan, sewa.noktp, users.username, mobil.nopol FROM sewa 
+        $sql = "SELECT sewa.id,sewa.tanggal_mulai, sewa.tanggal_akhir, sewa.tujuan, sewa.noktp, users.username, mobil.nopol, mobil.warna FROM sewa 
                 join users ON users.id = sewa.users_id 
                 join mobil ON mobil.id = sewa.mobil_id WHERE sewa.users_id =".$id;
         $query = $this->db->query($sql);
