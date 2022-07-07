@@ -53,7 +53,6 @@ class SewaModel extends CI_Model
 
     function update($data)
     {
-        var_dump($data);
         $sql = "UPDATE sewa SET tanggal_mulai=?,tanggal_akhir=?,tujuan=?,noktp=?,mobil_id=? WHERE id=?";
         $this->db->query($sql,$data);
     }
