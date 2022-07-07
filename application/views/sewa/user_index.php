@@ -39,7 +39,8 @@
                     <th>Tanggal Mulai</th>
                     <th>Tanggal Akhir</th>
                     <th>Tujuan</th>
-                    <th>Nama Mobil</th>
+                    <th>Nomor Polisi</th>
+                    <th>Merk Mobil</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -51,6 +52,7 @@
                         <td><?= $s->tanggal_akhir; ?></td>
                         <td><?= $s->tujuan; ?></td>
                         <td><?= $s->nopol; ?></td>
+                        <td><?= $s->nama; ?></td>
                         <td>
                           <!-- <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a> -->
                           <a href="../sewa/user_edit?id=<?= $s->id; ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
