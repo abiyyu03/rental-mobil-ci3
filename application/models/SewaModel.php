@@ -19,7 +19,7 @@ class SewaModel extends CI_Model
 
     function getMobil()
     {
-        $sql = "SELECT mobil.id as id, merk.nama, mobil.nopol FROM mobil join merk ON merk.id = mobil.merk_id";
+        $sql = "SELECT mobil.id as id_mobil, merk.nama, mobil.nopol FROM mobil join merk ON merk.id = mobil.merk_id";
         $query = $this->db->query($sql);
         return $query->result();
     }

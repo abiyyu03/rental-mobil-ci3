@@ -55,7 +55,7 @@
                   <select name="mobil_id" id="mobil_id" class="form-control" required>
                     <option value="">-</option>
                     <?php foreach($mobil_data as $m) :?>
-                      <option value="<?= $m->id;?>"><?= $m->nama;?> - <?= $m->nopol;?></option>
+                      <option value="<?= $m->id_mobil;?>"><?= $m->nama;?> - <?= $m->nopol;?></option>
                     <?php endforeach;?>
                   </select>
                 </div>
