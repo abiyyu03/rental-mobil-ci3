@@ -139,21 +139,22 @@ class Sewa extends CI_Controller
             $noktp = $this->input->post('noktp');
             $mobil_id = $this->input->post('mobil_id');
             $user_id = $this->input->post('user_id');
+            var_dump($mobil_id);
+            die();
+            // $data[] = $tanggal_mulai;
+            // $data[] = $tanggal_akhir;
+            // $data[] = $tujuan;
+            // $data[] = $noktp;
+            // $data[] = $mobil_id;
+            // $data[] = $role_data['id'];
     
-            $data[] = $tanggal_mulai;
-            $data[] = $tanggal_akhir;
-            $data[] = $tujuan;
-            $data[] = $noktp;
-            $data[] = $mobil_id;
-            $data[] = $role_data['id'];
-    
-            $this->sewa->store($data);
-            $this->session->set_flashdata('sukses','data berhasil ditambah!');
-            if($role_data['role'] == "administrator"){
-                redirect(base_url()."index.php/sewa");
-            } else {
-                redirect(base_url()."index.php/sewa/user_index");
-            }
+            // $this->sewa->store($data);
+            // $this->session->set_flashdata('sukses','data berhasil ditambah!');
+            // if($role_data['role'] == "administrator"){
+            //     redirect(base_url()."index.php/sewa");
+            // } else {
+            //     redirect(base_url()."index.php/sewa/user_index");
+            // }
         }
     }
 
