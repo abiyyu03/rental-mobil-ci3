@@ -165,4 +165,13 @@ class Sewa extends CI_Controller
         $this->session->set_flashdata('sukses','data berhasil dihapus!');
         redirect(base_url()."index.php/sewa");
     }
+
+    function user_delete()
+    {
+        $id = $this->input->get('id');
+        $this->load->model('SewaModel','sewa');
+        $this->sewa->delete($id);
+        $this->session->set_flashdata('sukses','data berhasil dihapus!');
+        redirect(base_url()."index.php/sewa/user_index");
+    }
 }

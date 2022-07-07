@@ -54,7 +54,7 @@
                         <td>
                           <!-- <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a> -->
                           <a href="../sewa/user_edit?id=<?= $s->id; ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                          <a href="../sewa/delete?id=<?= $s->id; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                          <a href="../sewa/user_delete?id=<?= $s->id; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                         </td>
                       </tr>
                     <?php endforeach;?>
